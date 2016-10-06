@@ -3,7 +3,6 @@ package com.prisyazhnuy.bullscows.fragment;
 import android.animation.Animator;
 import android.animation.AnimatorInflater;
 import android.app.Fragment;
-import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;

@@ -3,7 +3,6 @@ package com.prisyazhnuy.bullscows.fragment;
 import android.animation.Animator;
 import android.animation.AnimatorInflater;
 import android.app.Fragment;
-import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -50,7 +49,7 @@ public class KeyboardFragment extends Fragment implements View.OnClickListener {
         } else {
             mAttempt = new Number(4);
         }
-//        mNumberManager = (NumberManager) getActivity();
+        mNumberManager = (NumberManager) getActivity();
         Button btnOne = (Button) fragment.findViewById(R.id.btnOne);
         btnOne.setOnClickListener(this);
         Button btnTwo = (Button) fragment.findViewById(R.id.btnTwo);
@@ -112,12 +111,6 @@ public class KeyboardFragment extends Fragment implements View.OnClickListener {
             }
         }
         return fragment;
-    }
-
-    @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
-        mNumberManager = (NumberManager) getActivity();
     }
 
     @Override

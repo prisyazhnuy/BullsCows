@@ -52,24 +52,22 @@ public class MainActivity extends AppCompatActivity implements NumberManager {
         mNumber = new Number(SIZE);
         mNumber.generateNumber();
         Log.d(TAG, "onCreate: number = " + mNumber.toString());
-//        FragmentManager fragmentManager = getFragmentManager();
-//        mGameFieldFragment = fragmentManager.findFragmentByTag("GAME_FIELD");
-//        if (mGameFieldFragment == null) {
-//            mGameFieldFragment = new GameFieldFragment();
-//            FragmentTransaction transaction = getFragmentManager().beginTransaction();
-//            transaction.add(R.id.rlGameField, mGameFieldFragment, "GAME_FIELD");
-//            transaction.commit();
-//        }
-//
-//        mKeyboardFragment = fragmentManager.findFragmentByTag("KEYBOARD");
-//        if (mKeyboardFragment == null) {
-//            mKeyboardFragment = new KeyboardFragment();
-//            FragmentTransaction transaction = getFragmentManager().beginTransaction();
-//            transaction.add(R.id.rlKeyboard, mKeyboardFragment, "KEYBOARD");
-//            transaction.commit();
-//        }
-        mGameFieldFragment = new GameFieldFragment();
-        mKeyboardFragment = new KeyboardFragment();
+        FragmentManager fragmentManager = getFragmentManager();
+        mGameFieldFragment = fragmentManager.findFragmentByTag("GAME_FIELD");
+        if (mGameFieldFragment == null) {
+            mGameFieldFragment = new GameFieldFragment();
+            FragmentTransaction transaction = getFragmentManager().beginTransaction();
+            transaction.add(R.id.rlGameField, mGameFieldFragment, "GAME_FIELD");
+            transaction.commit();
+        }
+
+        mKeyboardFragment = fragmentManager.findFragmentByTag("KEYBOARD");
+        if (mKeyboardFragment == null) {
+            mKeyboardFragment = new KeyboardFragment();
+            FragmentTransaction transaction = getFragmentManager().beginTransaction();
+            transaction.add(R.id.rlKeyboard, mKeyboardFragment, "KEYBOARD");
+            transaction.commit();
+        }
     }
 
     @Override
